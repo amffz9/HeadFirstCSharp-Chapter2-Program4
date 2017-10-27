@@ -28,12 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.changeText = new System.Windows.Forms.Button();
+            this.enableCheckBox = new System.Windows.Forms.CheckBox();
+            this.labelToChange = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // changeText
+            // 
+            resources.ApplyResources(this.changeText, "changeText");
+            this.changeText.Name = "changeText";
+            this.changeText.UseVisualStyleBackColor = true;
+            this.changeText.Click += new System.EventHandler(this.changeText_Click);
+            // 
+            // enableCheckBox
+            // 
+            resources.ApplyResources(this.enableCheckBox, "enableCheckBox");
+            this.enableCheckBox.Name = "enableCheckBox";
+            this.enableCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // labelToChange
+            // 
+            resources.ApplyResources(this.labelToChange, "labelToChange");
+            this.labelToChange.Name = "labelToChange";
+            // 
+            // Form1
+            // 
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.Controls.Add(this.labelToChange);
+            this.Controls.Add(this.enableCheckBox);
+            this.Controls.Add(this.changeText);
+            this.Name = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button changeText;
+        private System.Windows.Forms.CheckBox enableCheckBox;
+        private System.Windows.Forms.Label labelToChange;
     }
 }
 

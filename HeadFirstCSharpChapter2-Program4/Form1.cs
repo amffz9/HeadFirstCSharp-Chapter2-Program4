@@ -16,5 +16,27 @@ namespace HeadFirstCSharpChapter2_Program4
         {
             InitializeComponent();
         }
+
+        private void changeText_Click(object sender, EventArgs e)
+        {
+            if(enableCheckBox.Checked == true)
+            {
+                if(labelToChange.Text == "Right")
+                {
+                    labelToChange.Text = "Left";
+                    labelToChange.TextAlign = ContentAlignment.MiddleLeft;
+                }
+                else
+                {
+                    labelToChange.Text = "Right";
+                    labelToChange.TextAlign = ContentAlignment.MiddleRight;
+                }
+            }
+            else
+            {
+                labelToChange.Text = "Text Changing is disabled";
+                labelToChange.TextAlign = ContentAlignment.MiddleCenter;
+            }
+        }
     }
 }
